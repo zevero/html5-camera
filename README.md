@@ -6,7 +6,7 @@ using an invisible HTML5 input tag to capture a foto on ios and android. Foto is
 
 
       var $info = $('#photo_info');
-      var showInfo = function(s){// true ... ok, number ... percentage, string ... error
+      var showInfo = function(s){// either xhr response, client error, or upload percentage
             $info.html((s.response)?s.response:(isNaN(s))?s:s + '%');
       };
       var showPhoto = function(url){$('#image').attr('src', url);};
@@ -54,8 +54,8 @@ ios8, ios9, Android 5
 
 ##coming next
 
--Seperation of Capture and Upload to handle offline situations
--Usage of getUserMedia where possible
+ - Seperation of Capture and Upload to handle offline situations
+ - Usage of getUserMedia where possible
 
 ##credits
 
