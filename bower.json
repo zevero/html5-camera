@@ -1,0 +1,34 @@
+{
+  "name": "camera",
+  "version": "1.0.0",
+  "homepage": "https://github.com/zevero/camera",
+  "authors": [
+    "Puschkarski Severin <severin@puschkarski.org>"
+  ],
+  "description": "using an invisible HTML5 input tag to capture a foto on ios and android. Foto is resized and ready for XHR - upload",
+  "main": "camera.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "camera",
+    "html5",
+    "capture",
+    "photo",
+    "input",
+    "mobil",
+    "ios",
+    "android",
+    "resize"
+  ],
+  "license": "GLP",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+  }
+}
