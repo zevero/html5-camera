@@ -1,4 +1,4 @@
-# camera
+# html5-camera
 using an invisible HTML5 input tag to capture a foto on ios and android. Foto is resized (bilinear) and uploaded by XHR with progress info
 
 ## Usage example
