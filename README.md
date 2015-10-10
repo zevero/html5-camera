@@ -1,15 +1,15 @@
-# html5-camera
-using an invisible HTML5 input tag to capture a foto on ios and android. Foto is resized (bilinear) and uploaded by XHR with progress info
+# Camera
+Using an invisible HTML5 input tag to capture a foto on ios and android. Foto is resized, oriented and uploaded by XHR with progress info
 
 ## Usage example
 ####Browser
 
 
       var $info = $('#photo_info');
-      var showInfo = function(s){// either xhr response, client error, or upload percentage
+      var showInfo = function(s){// true ... ok, number ... percentage, string ... error
             $info.html((s.response)?s.response:(isNaN(s))?s:s + '%');
       };
-      var showPhoto = function(url){$('#image').attr('src', url);};
+      var showPhoto = function(canvas){$('#image').attr('src', canvas.toDataUrl());};
 
       $('#photo_button').click(function(){
         camera({
@@ -17,7 +17,7 @@ using an invisible HTML5 input tag to capture a foto on ios and android. Foto is
           photo_jpeg_quality: 0.7,       //jpeg-quality from 0 to 1.0
           xhr:                '/foto',   //url of where the photo shall be uploaded
           callback_xhr:       showInfo,  //show some info on upload progress
-          callback_dataURL:   showPhoto  //display the photo in an img-element
+          callback_canvas:   showPhoto  //display the photo in an img-element
         });
       });
 
@@ -44,20 +44,25 @@ using an invisible HTML5 input tag to capture a foto on ios and android. Foto is
       });
 
 
-##restrictions
 
-Depends on jquery. Only for jpeg.
 
-##tested
+## Dependencies
 
-ios8, ios9, Android 5
+ - Depends on jquery
+ - Depends on https://github.com/blueimp/JavaScript-Load-Image
+ - Depends on https://github.com/blueimp/JavaScript-Canvas-to-Blob
+ - Only for Jpeg
 
-##coming next
+
+## Tested
+
+Chrome 44, Firefox 38, ios8, ios9, Android 5
+
+## Todos?
 
  - Seperation of Capture and Upload to handle offline situations
  - Usage of getUserMedia where possible
 
-##credits
-
-hMatoba https://github.com/hMatoba/MinifyJpegAsync
-robertdmun && gokercebeci https://github.com/robertdmunn/canvasResize
+## Alternatives
+ - hMatoba https://github.com/hMatoba/MinifyJpegAsync
+ - robertdmun && gokercebeci https://github.com/robertdmunn/canvasResize

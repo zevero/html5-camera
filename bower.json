@@ -1,7 +1,7 @@
 {
-  "name": "html5-camera",
-  "version": "0.1.3",
-  "homepage": "https://github.com/zevero/html5-camera",
+  "name": "camera",
+  "version": "1.0.0",
+  "homepage": "https://github.com/zevero/camera",
   "authors": [
     "Puschkarski Severin <severin@puschkarski.org>"
   ],
@@ -30,6 +30,8 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "^2.0"
+    "jquery": "^2.0.0",
+    "blueimp-canvas-to-blob": "~2.2.0",
+    "blueimp-load-image": "~1.14.0"
   }
 }
