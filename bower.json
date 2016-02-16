@@ -31,7 +31,7 @@
   ],
   "dependencies": {
     "jquery": "^2.0.0",
-    "blueimp-canvas-to-blob": "~2.2.0",
-    "blueimp-load-image": "~1.14.0"
+    "blueimp-canvas-to-blob": "~3.1.0",
+    "blueimp-load-image": "~2.1.0"
   }
 }
