@@ -30,7 +30,7 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "^2.0.0",
+    "jquery": ">=2.0.0",
     "blueimp-canvas-to-blob": "^3.14.0",
     "blueimp-load-image": "^2.17.0"
   }
