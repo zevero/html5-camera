@@ -35,9 +35,8 @@ var camera = (function() {
     xhr.send(formData);
   }
 
-  function canvasSend(img, data){
+  function canvasSend(img){
     //document.body.appendChild(canvas);
-    var canvas = loadImage.scale(img, options, data);
     canvas.toBlob(photoSend,'image/jpeg',options.photo_jpeg_quality);
   }
 
